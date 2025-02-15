@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta ="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .nav-item{
+         margin-left:40px;
+         font-size:large;
+        }
+        .title{
+            font-size: 30px;
+            font-family:fantasy;
+        }
+        .navvv{
+            margin-top:50px;
+        }
+        .footer {
+            background-color: black;
+            color: white;
+            padding: 40px 0;
+        }
+        .footer h4 {
+            border-bottom: 2px solid white;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        .social-icons i {
+            font-size: 1.8rem;
+            margin-right: 15px;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .social-icons .fa-whatsapp:hover { color: lightgreen; }
+        .social-icons .fa-facebook:hover { color: blue; }
+        .social-icons .fa-youtube:hover { color: red; }
+        .social-icons .fa-instagram:hover { color: purple; }
+        .social-icons .fa-x-twitter:hover { color: darkcyan; }
+        .logo {
+            max-width:600px; /* Adjust logo size */
+            margin-bottom: 20px;
+        }
+        #room{
+            background-color:orange;
+            max-width:300px;
+            border-top-right-radius:100px;
+            border-bottom-left-radius:100px;
+            padding:5px;
+        }
+        #food{
+            background-color:orange;
+            max-width:300px;
+            border-top-right-radius:100px;
+            border-bottom-left-radius:100px;
+            padding: 5px;
+        }
+         </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <img src="img/logoo.png" alt="Logo" width="150px" height="auto" class="d-inline-block align-text-top">
+                
+                <!-- Offcanvas Toggle Button (Visible when screen is smaller than 992px) -->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Standard Navbar (Hidden on small screens) -->
+                <div class="d-none d-lg-block">
+                    <ul class="navbar-nav ms-auto d-flex flex-row">
+                        <li class="nav-item mx-3">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="rooms.html">Rooms</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="foods.html">Food</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="loginpage.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <!-- Offcanvas Sidebar (Shown on screens smaller than 992px) -->
+                <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="rooms.html">Rooms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="foods.html">Food</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="loginpage.html">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+    </nav>
+    <!-- Carousel -->
+    <div id="carouselExample" class="carousel slide navvv" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active position-relative">
+                <img src="img/bann.png" class="d-block w-100" alt="Carousel Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="container my-5">
+        <center><h2 class="text-center mb-4" id="room">Our Rooms</h2></center>
+        <div class="row">
+            <div class="col-md-4 img1"><img src="img/r21.webp" class="img-fluid" alt="Room"><span class="title"><center>Prime</center></span></div>
+            <div class="col-md-4"><img src="img/r31.avif" class="img-fluid" alt="Room"><span class="title"><center>Deluxe</center></span></div>
+            <div class="col-md-4"><img src="img/r41.avif" class="img-fluid" alt="Room"><span class="title"><center>Classic</center></span></div>
+        </div>
+    </section>
+
+    <!-- Food Section -->
+    <section id="foods" class="container my-5">
+       <center><h2 class="text-center mb-4" id="food">Our Foods</h2></center> 
+        <div class="row">
+            <div class="col-md-4 container-f"><img src="img/f1.avif" class="img-fluid" alt="Food" ><span class="title"><center>Italian</center></div>
+            <div class="col-md-4 container-f"><img src="img/f2.avif" class="img-fluid" alt="Food" ><span class="title"><center>Chinese</center></div>
+            <div class="col-md-4 container-f"><img src="img/f3.avif" class="img-fluid" alt="Food" ><span class="title"><center>Indian</center></div>
+        </div>
+    </section>
+     <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container text-center">
+            <!-- Company Logo -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <img src="img/logoo_white.png" alt="Company Logo" class="logo img-fluid">
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Services Section -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <h4>SERVICES</h4>
+                    <ul class="list-unstyled">
+                        <li>Rooms</li>
+                        <li>Food</li>
+                        <li>Transport</li>
+                        <li>Party Hall</li>
+                        <li>DJ Pub</li>
+                    </ul>
+                </div>
+
+                <!-- Important Links Section -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <h4>IMPORTANT LINKS</h4>
+                    <ul class="list-unstyled">
+                        <li>About Us</li>
+                        <li>FAQs</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms & Conditions</li>
+                        <li>Shipping Policy</li>
+                        <li>Refund/Cancellations</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <h4>CONTACT US</h4>
+                    <p>Dubai Street, Dubai Main Rd</p>
+                    <p>Near Dubai Bus Stand</p>
+                    <p>Dubai - 000001</p>
+                    <p>Ph: 9922256789</p>
+                </div>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="row text-center mt-4">
+                <div class="col-12 social-icons">
+                    <i class="fab fa-whatsapp"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-x-twitter"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+     
+     </body>
+     </html>
+

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta ="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .nav-item{
+         margin-left:40px;
+         font-size:large;
+        }
+        .title{
+            font-size: 30px;
+            font-family:fantasy;
+        }
+        .navvv{
+            margin-top:50px;
+        }
+        .footer {
+            background-color: black;
+            color: white;
+            padding: 40px 0;
+        }
+        .footer h4 {
+            border-bottom: 2px solid white;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        .social-icons i {
+            font-size: 1.8rem;
+            margin-right: 15px;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .social-icons .fa-whatsapp:hover { color: lightgreen; }
+        .social-icons .fa-facebook:hover { color: blue; }
+        .social-icons .fa-youtube:hover { color: red; }
+        .social-icons .fa-instagram:hover { color: purple; }
+        .social-icons .fa-x-twitter:hover { color: darkcyan; }
+        .logo {
+            max-width:600px; /* Adjust logo size */
+            margin-bottom: 20px;
+        }
+        #room{
+            background-color:orange;
+            max-width:300px;
+            border-top-right-radius:100px;
+            border-bottom-left-radius:100px;
+            padding:5px;
+        }
+        #food{
+            background-color:orange;
+            max-width:300px;
+            border-top-right-radius:100px;
+            border-bottom-left-radius:100px;
+            padding: 5px;
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+        }
+        .footer{
+          margin-top:5%;
+        }
+        #room{
+            background-color:orange;
+            max-width:300px;
+            border-top-right-radius:100px;
+            border-bottom-left-radius:100px;
+            padding:5px;
+        }
+        .margin{
+          margin-top:5%;
+        }
+        .hover{
+          display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+    gap: 1.5rem;
+ 
+        }
+         </style>
+</head>
+<body>
+    <!-- Navbar -->
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <img src="img/logoo.png" alt="Logo" width="150px" height="auto" class="d-inline-block align-text-top">
+                
+                <!-- Offcanvas Toggle Button (Visible when screen is smaller than 992px) -->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Standard Navbar (Hidden on small screens) -->
+                <div class="d-none d-lg-block">
+                    <ul class="navbar-nav ms-auto d-flex flex-row">
+                        <li class="nav-item mx-3">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="rooms.html">Rooms</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="foods.html">Food</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="loginpage.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <!-- Offcanvas Sidebar (Shown on screens smaller than 992px) -->
+                <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="rooms.html">Rooms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="foods.html">Food</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="loginpage.html">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <center><h2 class="text-center mb-4 margin" id="room">Prime</h2></center>
+       <div class="hover">
+       
+        <div class="container">
+          <!-- Card -->
+          <div class="card" style="width: 18rem; margin: auto;">
+              <div id="productCarousel" class="carousel slide" >
+                  <div class="carousel-inner">
+                      <!-- First Slide -->
+                      <div class="carousel-item active">
+                          <img src="img/r11.avif" class="d-block w-100" alt="Product Image 1">
+                      </div>
+                      <!-- Second Slide -->
+                      <div class="carousel-item">
+                          <img src="img/r12.avif" class="d-block w-100" alt="Product Image 2">
+                      </div>
+                      <!-- Third Slide -->
+                      <div class="carousel-item">
+                          <img src="img/r13.avif" class="d-block w-100" alt="Product Image 3">
+                      </div>
+                  </div>
+                  <!-- Carousel Controls -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">Product Title</h5>
+                  <p class="card-text">Description of the product.</p>
+                  <a href="#" class="btn btn-primary me-4">View Details</a>
+                  <a href="#" class="btn btn-primary">Book Now</a>
+              </div>
+          </div>
+      </div>
+        <div class="container">
+          <!-- Card -->
+          <div class="card" style="width: 18rem; margin: auto;">
+              <div id="productCarousel1" class="carousel slide" >
+                  <div class="carousel-inner">
+                      <!-- First Slide -->
+                      <div class="carousel-item active">
+                          <img src="img/r1.webp" class="d-block w-100" alt="Product Image 1">
+                      </div>
+                      <!-- Second Slide -->
+                      <div class="carousel-item">
+                          <img src="img/r2.webp" class="d-block w-100" alt="Product Image 2">
+                      </div>
+                      <!-- Third Slide -->
+                      <div class="carousel-item">
+                          <img src="img/r1.webp" class="d-block w-100" alt="Product Image 3">
+                      </div>
+                  </div>
+                  <!-- Carousel Controls -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel1" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel1" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">Product Title</h5>
+                  <p class="card-text">Description of the product.</p>
+                  <a href="#" class="btn btn-primary me-4">View Details</a>
+                  <a href="#" class="btn btn-primary">Book Now</a>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+        <!-- Card -->
+        <div class="card" style="width: 18rem; margin: auto;">
+            <div id="productCarousel2" class="carousel slide" >
+                <div class="carousel-inner">
+                    <!-- First Slide -->
+                    <div class="carousel-item active">
+                        <img src="img/r21.webp" class="d-block w-100" alt="Product Image 1">
+                    </div>
+                    <!-- Second Slide -->
+                    <div class="carousel-item">
+                        <img src="img/r22.avif" class="d-block w-100" alt="Product Image 2">
+                    </div>
+                    <!-- Third Slide -->
+                    <div class="carousel-item">
+                        <img src="img/r23.webp" class="d-block w-100" alt="Product Image 3">
+                    </div>
+                </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Product Title</h5>
+                <p class="card-text">Description of the product.</p>
+                <a href="#" class="btn btn-primary me-4">View Details</a>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <!-- Card -->
+      <div class="card" style="width: 18rem; margin: auto;">
+          <div id="productCarousel3" class="carousel slide" >
+              <div class="carousel-inner">
+                  <!-- First Slide -->
+                  <div class="carousel-item active">
+                      <img src="img/r31.avif" class="d-block w-100" alt="Product Image 1">
+                  </div>
+                  <!-- Second Slide -->
+                  <div class="carousel-item">
+                      <img src="img/r32.avif" class="d-block w-100" alt="Product Image 2">
+                  </div>
+                  <!-- Third Slide -->
+                  <div class="carousel-item">
+                      <img src="img/r33.avif" class="d-block w-100" alt="Product Image 3">
+                  </div>
+              </div>
+              <!-- Carousel Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel3" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#productCarousel3" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+          <div class="card-body">
+              <h5 class="card-title">Product Title</h5>
+              <p class="card-text">Description of the product.</p>
+              <a href="#" class="btn btn-primary me-4">View Details</a>
+                  <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+      </div>
+  </div>
+  
+       </div>
+       <center><h2 class="text-center mb-4 mt-5" id="room">Deluxe</h2></center>
+       <div class="hover">
+       
+        <div class="container">
+          <!-- Card -->
+          <div class="card" style="width: 18rem; margin: auto;">
+              <div id="productCarousel4" class="carousel slide" >
+                  <div class="carousel-inner">
+                      <!-- First Slide -->
+                      <div class="carousel-item active">
+                          <img src="img/r41.avif" class="d-block w-100" alt="Product Image 1">
+                      </div>
+                      <!-- Second Slide -->
+                      <div class="carousel-item">
+                          <img src="img/r42.avif" class="d-block w-100" alt="Product Image 2">
+                      </div>
+                      <!-- Third Slide -->
+                      <div class="carousel-item">
+                          <img src="img/r43.webp" class="d-block w-100" alt="Product Image 3">
+                      </div>
+                  </div>
+                  <!-- Carousel Controls -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel4" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel4" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">Product Title</h5>
+                  <p class="card-text">Description of the product.</p>
+                  <a href="#" class="btn btn-primary me-4">View Details</a>
+                  <a href="#" class="btn btn-primary">Book Now</a>
+              </div>
+          </div>
+      </div>
+        <div class="container">
+          <!-- Card -->
+          <div class="card" style="width: 18rem; margin: auto;">
+              <div id="productCarousel5" class="carousel slide" >
+                  <div class="carousel-inner">
+                      <!-- First Slide -->
+                      <div class="carousel-item active">
+                          <img src="img/r51.avif" class="d-block w-100" alt="Product Image 1">
+                      </div>
+                      <!-- Second Slide -->
+                      <div class="carousel-item">
+                          <img src="img/r53.avif" class="d-block w-100" alt="Product Image 2">
+                      </div>
+                      <!-- Third Slide -->
+                      <div class="carousel-item">
+                          <img src="img/r52.webp" class="d-block w-100" alt="Product Image 3">
+                      </div>
+                  </div>
+                  <!-- Carousel Controls -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel5" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel5" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">Product Title</h5>
+                  <p class="card-text">Description of the product.</p>
+                  <a href="#" class="btn btn-primary me-4">View Details</a>
+                  <a href="#" class="btn btn-primary">Book Now</a>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+        <!-- Card -->
+        <div class="card" style="width: 18rem; margin: auto;">
+            <div id="productCarousel6" class="carousel slide" >
+                <div class="carousel-inner">
+                    <!-- First Slide -->
+                    <div class="carousel-item active">
+                        <img src="img/r61.avif" class="d-block w-100" alt="Product Image 1">
+                    </div>
+                    <!-- Second Slide -->
+                    <div class="carousel-item">
+                        <img src="img/r62.avif" class="d-block w-100" alt="Product Image 2">
+                    </div>
+                    <!-- Third Slide -->
+                    <div class="carousel-item">
+                        <img src="img/r63.avif" class="d-block w-100" alt="Product Image 3">
+                    </div>
+                </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel6" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel6" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Product Title</h5>
+                <p class="card-text">Description of the product.</p>
+                <a href="#" class="btn btn-primary me-4">View Details</a>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <!-- Card -->
+      <div class="card" style="width: 18rem; margin: auto;">
+          <div id="productCarousel7" class="carousel slide" >
+              <div class="carousel-inner">
+                  <!-- First Slide -->
+                  <div class="carousel-item active">
+                      <img src="img/r71.avif" class="d-block w-100" alt="Product Image 1">
+                  </div>
+                  <!-- Second Slide -->
+                  <div class="carousel-item">
+                      <img src="img/r72.avif" class="d-block w-100" alt="Product Image 2">
+                  </div>
+                  <!-- Third Slide -->
+                  <div class="carousel-item">
+                      <img src="img/r73.webp" class="d-block w-100" alt="Product Image 3">
+                  </div>
+              </div>
+              <!-- Carousel Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel7" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#productCarousel7" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+          <div class="card-body">
+              <h5 class="card-title">Product Title</h5>
+              <p class="card-text">Description of the product.</p>
+              <a href="#" class="btn btn-primary me-4">View Details</a>
+              <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+      </div>
+  </div>
+  
+       </div>
+       <center><h2 class="text-center mb-4 mt-5" id="room">Classic</h2></center>
+       <div class="hover">
+        
+        <div class="container">
+          <!-- Card -->
+          <div class="card" style="width: 18rem; margin: auto;">
+              <div id="productCarousel8" class="carousel slide" >
+                  <div class="carousel-inner">
+                      <!-- First Slide -->
+                      <div class="carousel-item active">
+                          <img src="img/r81.avif" class="d-block w-100" alt="Product Image 1">
+                      </div>
+                      <!-- Second Slide -->
+                      <div class="carousel-item">
+                          <img src="img/r1.webp" class="d-block w-100" alt="Product Image 2">
+                      </div>
+                      <!-- Third Slide -->
+                      <div class="carousel-item">
+                          <img src="img/r2.webp" class="d-block w-100" alt="Product Image 3">
+                      </div>
+                  </div>
+                  <!-- Carousel Controls -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel8" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel8" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">Product Title</h5>
+                  <p class="card-text">Description of the product.</p>
+                  <a href="#" class="btn btn-primary me-4">View Details</a>
+                  <a href="#" class="btn btn-primary">Book Now</a>
+              </div>
+          </div>
+      </div>
+        <div class="container">
+          <!-- Card -->
+          <div class="card" style="width: 18rem; margin: auto;">
+              <div id="productCarousel9" class="carousel slide" >
+                  <div class="carousel-inner">
+                      <!-- First Slide -->
+                      <div class="carousel-item active">
+                          <img src="img/r21.webp" class="d-block w-100" alt="Product Image 1">
+                      </div>
+                      <!-- Second Slide -->
+                      <div class="carousel-item">
+                          <img src="img/r22.avif" class="d-block w-100" alt="Product Image 2">
+                      </div>
+                      <!-- Third Slide -->
+                      <div class="carousel-item">
+                          <img src="img/r23.webp" class="d-block w-100" alt="Product Image 3">
+                      </div>
+                  </div>
+                  <!-- Carousel Controls -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel9" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel9" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">Product Title</h5>
+                  <p class="card-text">Description of the product.</p>
+                  <a href="#" class="btn btn-primary me-4">View Details</a>
+                  <a href="#" class="btn btn-primary">Book Now</a>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+        <!-- Card -->
+        <div class="card" style="width: 18rem; margin: auto;">
+            <div id="productCarousel10" class="carousel slide" >
+                <div class="carousel-inner">
+                    <!-- First Slide -->
+                    <div class="carousel-item active">
+                        <img src="img/r31.avif" class="d-block w-100" alt="Product Image 1">
+                    </div>
+                    <!-- Second Slide -->
+                    <div class="carousel-item">
+                        <img src="img/r32.avif" class="d-block w-100" alt="Product Image 2">
+                    </div>
+                    <!-- Third Slide -->
+                    <div class="carousel-item">
+                        <img src="img/r33.avif" class="d-block w-100" alt="Product Image 3">
+                    </div>
+                </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel10" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel10" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Product Title</h5>
+                <p class="card-text">Description of the product.</p>
+                <a href="#" class="btn btn-primary me-4">View Details</a>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+      <!-- Card -->
+      <div class="card" style="width: 18rem; margin: auto;">
+          <div id="productCarousel11" class="carousel slide" >
+              <div class="carousel-inner">
+                  <!-- First Slide -->
+                  <div class="carousel-item active">
+                      <img src="img/r41.avif" class="d-block w-100" alt="Product Image 1">
+                  </div>
+                  <!-- Second Slide -->
+                  <div class="carousel-item">
+                      <img src="img/r42.avif" class="d-block w-100" alt="Product Image 2">
+                  </div>
+                  <!-- Third Slide -->
+                  <div class="carousel-item">
+                      <img src="img/r43.webp" class="d-block w-100" alt="Product Image 3">
+                  </div>
+              </div>
+              <!-- Carousel Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel11" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#productCarousel11" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+          <div class="card-body">
+              <h5 class="card-title">Product Title</h5>
+              <p class="card-text">Description of the product.</p>
+              <a href="#" class="btn btn-primary me-4">View Details</a>
+              <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+      </div>
+  </div>
+  
+       </div>
+     <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container text-center">
+            <!-- Company Logo -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <img src="img/logoo_white.png" alt="Company Logo" class="logo img-fluid">
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Services Section -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <h4>SERVICES</h4>
+                    <ul class="list-unstyled">
+                        <li>Rooms</li>
+                        <li>Food</li>
+                        <li>Transport</li>
+                        <li>Party Hall</li>
+                        <li>DJ Pub</li>
+                    </ul>
+                </div>
+
+                <!-- Important Links Section -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <h4>IMPORTANT LINKS</h4>
+                    <ul class="list-unstyled">
+                        <li>About Us</li>
+                        <li>FAQs</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms & Conditions</li>
+                        <li>Shipping Policy</li>
+                        <li>Refund/Cancellations</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <h4>CONTACT US</h4>
+                    <p>Dubai Street, Dubai Main Rd</p>
+                    <p>Near Dubai Bus Stand</p>
+                    <p>Dubai - 000001</p>
+                    <p>Ph: 9922256789</p>
+                </div>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="row text-center mt-4">
+                <div class="col-12 social-icons">
+                    <i class="fab fa-whatsapp"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-x-twitter"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+     
+     </body>
+     </html>
+
